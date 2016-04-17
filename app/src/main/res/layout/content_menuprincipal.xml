@@ -44,11 +44,13 @@
                     android:paddingRight="25dp"
                     android:orientation="vertical" >
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/addUsuario"
+
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:layout_height="wrap_content"
-                        android:padding="16dp"
+                        android:padding="5dp"
                         android:src="@drawable/addusuario" />
 
                     <TextView
@@ -66,7 +68,7 @@
                     android:paddingRight="25dp"
                     android:orientation="vertical" >
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:padding="16dp"
@@ -97,7 +99,7 @@
                     android:paddingRight="25dp"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:layout_height="wrap_content"
@@ -119,7 +121,7 @@
                     android:paddingRight="25dp"
                     android:orientation="vertical" >
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:layout_height="wrap_content"
