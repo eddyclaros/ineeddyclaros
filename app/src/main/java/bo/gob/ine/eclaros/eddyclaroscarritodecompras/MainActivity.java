@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String campo_usuario = txtUsuario.getText().toString();
                 String campo_password = txtPassword.getText().toString();
 
-                if (campo_usuario.compareTo("hola") == 0 && campo_password.compareTo("mundo") == 0)
+                if (campo_usuario.compareTo("eddy") == 0 && campo_password.compareTo("claros") == 0)
                     txtResultado.setText("Login aceptado");
                 else
                     txtResultado.setText("Login fallido");
