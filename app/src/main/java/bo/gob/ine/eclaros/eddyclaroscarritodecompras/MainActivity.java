@@ -1,5 +1,7 @@
 package bo.gob.ine.eclaros.eddyclaroscarritodecompras;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,15 +20,17 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtPassword;
     private Button btnEnviar;
     private TextView txtResultado;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context =this;
 
-        //Comentado porque no necesitamos el action bar
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         //Comentado porque no necesitamos el boton flotante
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -52,9 +56,18 @@ public class MainActivity extends AppCompatActivity {
                 String campo_password = txtPassword.getText().toString();
 
                 if (campo_usuario.compareTo("eddy") == 0 && campo_password.compareTo("claros") == 0)
-                    txtResultado.setText("Login aceptado");
+                {
+                    Intent a=new Intent(context,MenuPrincipal.class);
+
+                    String[] datos=new String[2];
+                    datos[0]=txtUsuario.getText().toString();
+                    datos[1]=txtPassword.getText().toString();
+                    a.putExtra("datos_usuario", datos);
+                    startActivity(a);
+
+                }
                 else
-                    txtResultado.setText("Login fallido");
+                    txtResultado.setText("Incorrecto");
             }
         });
 
