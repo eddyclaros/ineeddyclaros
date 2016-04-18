@@ -45,7 +45,7 @@
                     android:orientation="vertical" >
 
                     <ImageButton
-                        android:id="@+id/addUsuario"
+                        android:id="@+id/btnAddUsuario"
 
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
@@ -69,7 +69,8 @@
                     android:orientation="vertical" >
 
                     <ImageButton
-                        android:layout_width="match_parent"
+                        android:id="@+id/btnAddProducto"
+                        android:layout_width="wrap_content"
                         android:adjustViewBounds="true"
                         android:padding="16dp"
                         android:layout_height="wrap_content"
@@ -100,6 +101,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/btnAddVenta"
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:layout_height="wrap_content"
@@ -122,6 +124,7 @@
                     android:orientation="vertical" >
 
                     <ImageButton
+                        android:id="@+id/btnSalir"
                         android:layout_width="match_parent"
                         android:adjustViewBounds="true"
                         android:layout_height="wrap_content"
