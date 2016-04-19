@@ -51,7 +51,7 @@ public class Productos extends AppCompatActivity {
                 ContentValues values = new ContentValues();
                 values.put("producto", producto.getText().toString().trim());
                 values.put("precio", precio.getText().toString().trim());
-                db.insert("productos", null, values);
+                db.insert("producto", null, values);
                 db.close();
                 Toast.makeText(getApplicationContext(), "Producto Agregado", Toast.LENGTH_SHORT).show();
                 reiniciarActividad();
@@ -59,8 +59,8 @@ public class Productos extends AppCompatActivity {
             }
         });
 
-        agregarFilas("Producto", "Precio", "0");
-        Cursor productos_existentes = db.rawQuery("SELECT id,producto,precio FROM productos", null);
+        agregarFilas("producto", "precio", "0");
+        Cursor productos_existentes = db.rawQuery("SELECT id,producto,precio FROM producto", null);
 
         if (productos_existentes.moveToFirst()) {
             do {
@@ -113,7 +113,7 @@ public class Productos extends AppCompatActivity {
                     values.put("precio", "12.00");
                     String[] args = new String[]{"" + view.getId()};
                     //db.update("Productos", values, "id LIKE ?", args);
-                    db.update("Productos", values, "id LIKE " + view.getId(), null);
+                    db.update("producto", values, "id LIKE " + view.getId(), null);
                     reiniciarActividad();
                 }
             });
@@ -128,7 +128,7 @@ public class Productos extends AppCompatActivity {
                 public void onClick(View view) {
                     Toast.makeText(context, "Producto Eliminado : " + view.getId(), Toast.LENGTH_SHORT).show();
                     String[] args = new String[]{"" + view.getId()};
-                    db.delete("Productos", "id LIKE ?", args);
+                    db.delete("producto", "id LIKE ?", args);
                     reiniciarActividad();
                 }
             });
