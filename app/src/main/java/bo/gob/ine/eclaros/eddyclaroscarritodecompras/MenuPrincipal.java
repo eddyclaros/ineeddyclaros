@@ -7,6 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageButton btnAddVenta;
     private ImageButton btnSalir;
 
+
     private Context context;
 
 
@@ -26,8 +28,8 @@ public class MenuPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuprincipal);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
         context=this;
 
@@ -44,6 +46,15 @@ public class MenuPrincipal extends AppCompatActivity {
 
 
         Toast.makeText(this,"Bienvenido "+datos_recibidos[0],Toast.LENGTH_SHORT).show();
+
+        //EVENTO AL BOTON PRODUCTO
+        btnAddUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a=new Intent(context,Productos.class);
+                startActivity(a);
+            }
+        });
 
     }
 

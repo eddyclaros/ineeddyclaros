@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtPassword;
     private Button btnEnviar;
     private TextView txtResultado;
+    private Button btnRegistrase;
     private Context context;
 
     @Override
@@ -29,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         context =this;
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+*/
         //Comentado porque no necesitamos el boton flotante
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
         txtUsuario=(EditText)findViewById(R.id.txtUsuario);
         txtPassword=(EditText)findViewById(R.id.txtPassword);
         btnEnviar=(Button)findViewById(R.id.btnEnviar);
-        txtResultado=(TextView)findViewById(R.id.txtResultado);
+        //txtResultado=(TextView)findViewById(R.id.txtResultado);
+        //btnRegistrase=(Button)findViewById(R.id.btnRegistrarse);
+
+
+        //btnRegistrase.setOnClickListener();
 
         //Evento de click en el botón
         btnEnviar.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else
-                    txtResultado.setText("Incorrecto");
+                    //txtResultado.setText("Incorrecto");
+                    Toast.makeText(context,"Usuario Incorrecto",Toast.LENGTH_SHORT).show();
             }
         });
 
