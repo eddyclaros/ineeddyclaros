@@ -29,7 +29,7 @@ public class baseDatos extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db)
     {
         //db.execSQL("create table usuario (id integer primary key autoimcrement not null,usuario varchar,contraseña varchar);");
-        db.execSQL("create table cliente (id integer primary key autoincrement not null, nombres varchar, apellidos varchar, ci varchar,usuario varchar);");
+        db.execSQL("create table cliente (id integer primary key autoincrement not null, nombres varchar, apellidos varchar, ci varchar);");
         db.execSQL("create table producto (id integer primary key autoincrement not null, producto text, precio integer);");
         db.execSQL("create table pedido (id integer primary key autoincrement not null, id_producto integer, id_cliente integer,cant_pedido integer,fecha_pedido date);");
 
