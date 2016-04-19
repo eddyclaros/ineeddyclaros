@@ -21,7 +21,7 @@ public class baseDatos extends SQLiteOpenHelper
     public static final String NOMBREDB= "compras.sqlite";
     public static final int VERSION=1;
 
-    public baseDatos(Context context){
+    public baseDatos(Context context, int VERSION){
         super(context,NOMBREDB,null,VERSION);
 
     }
